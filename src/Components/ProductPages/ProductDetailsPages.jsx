@@ -1,10 +1,10 @@
 import React from "react";
 
-const Product_Details_Pages = () => {
+const ProductDetailsPages = () => {
   return (
     <div>
       <h1>Product Details Pages</h1>
     </div>
   );
 };
-export default Product_Details_Pages;
+export default ProductDetailsPages;

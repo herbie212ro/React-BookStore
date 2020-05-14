@@ -5,7 +5,7 @@ const SearchButton = () => {
   const [authInputs] = useContext(AuthenticationContext);
 
   const searchClick = () => {
-    console.log("clicking Search button", { authInputs });
+    console.log("clicking Search button", authInputs);
   };
 
   if (authInputs.isLoggedIn === true) {

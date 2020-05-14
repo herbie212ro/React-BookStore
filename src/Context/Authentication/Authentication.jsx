@@ -4,11 +4,13 @@ export const AuthenticationContext = createContext();
 
 export const AuthenticationProvider = ({ children }) => {
   const [identify, setIdentify] = useState({
-    username: "harry",
-    password: "potter",
-    token: "",
-    UUID: "",
-    isLoggedIn: true,
+    userName: "",
+    password: "",
+    token: null,
+    UUID: null,
+    /* isLoggedIn - must be boolean, must be set to false before submitting*/
+    isLoggedIn: false,
+    isError: null,
   });
 
   return (

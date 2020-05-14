@@ -3,9 +3,9 @@ import { AuthenticationContext } from "../../Context/Authentication/Authenticati
 
 const Greeting = () => {
   const [authInputs] = useContext(AuthenticationContext);
-
-  if (authInputs.isLoggedIn === true) {
-    return <div>Welcome {authInputs.username}</div>;
+  console.log("testing greeting", authInputs);
+  if (authInputs.token !== null) {
+    return <div>Welcome {authInputs.userName}</div>;
   } else return null;
 };
 export default Greeting;

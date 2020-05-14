@@ -10,6 +10,7 @@ import HomePage from "../src/Components/homepage/HomePage";
 import Products from "./Components/ProductPages/Products";
 import Header from "./Components/Navigation/Header";
 import ProductListPages from "./Components/ProductPages/ProductListPages";
+import { Switch, Route } from "react-router-dom";
 
 function App() {
   return (
