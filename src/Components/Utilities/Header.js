@@ -1,6 +1,6 @@
 import React from "react";
-import SearchButton from "../Utilities/SearchButton";
-import Greeting from "../Utilities/Greeting";
+import SearchButton from "./SearchButton";
+import Greeting from "./Greeting";
 
 const header = () => {
   return (

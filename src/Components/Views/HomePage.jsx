@@ -4,14 +4,16 @@ import { AuthenticationContext } from "../../Context/Authentication/Authenticati
 import LogInMessage from "../Utilities/LogInMessage";
 
 const Homepage = () => {
-  const [authInputs] = useContext(AuthenticationContext);
+  const [authInputs, setAuthInputs] = useContext(AuthenticationContext);
 
   const login = (token) => {
-    console.log("token", token);
     localStorage.setItem("token", token); //setting local stoarge token
-    authInputs.password = null; //removing password from the context, don't want to store the password or the responsiblity
-    authInputs.token = true;
-    authInputs.isLoggedIn = true;
+    setAuthInputs({
+      ...authInputs,
+      password: null, //removing password from the context, don't want to store the password or the responsiblity
+      token: true,
+      isLoggedIn: true,
+    });
   };
   const logOut = () => {
     console.log("logged out");
@@ -27,7 +29,6 @@ const Homepage = () => {
       data: { username: authInputs.userName, password: authInputs.password },
     })
       .then((resp) => login(resp.data.token))
-
       .catch((error) => console.log(error))
       .then((authInputs.isError = false))
       .then((authInputs.userName = ""))
